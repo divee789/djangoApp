@@ -7,3 +7,6 @@ from .models import Todo
 class TodoView(viewsets.ModelViewSet):
     serializer_class = TodoSerializer
     queryset = Todo.objects.all()
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
