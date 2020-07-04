@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'rest_framework', 
     'pages.apps.PagesConfig',
     'todo.apps.TodoConfig',
+    'traversy.apps.TraversyConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
