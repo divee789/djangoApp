@@ -1,18 +1,23 @@
 import React from "react";
 import ReactDom from "react-dom";
+import { Provider } from "react-redux";
 
 import Header from "./layout/header";
 import Dashboard from "./members/Dashboard";
 
+import store from "../store";
+
 class App extends React.Component {
   render() {
     return (
-      <>
-        <Header />
-        <div className="container">
-          <Dashboard />
-        </div>
-      </>
+      <Provider store={store}>
+        <>
+          <Header />
+          <div className="container">
+            <Dashboard />
+          </div>
+        </>
+      </Provider>
     );
   }
 }
