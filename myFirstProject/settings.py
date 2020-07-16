@@ -31,19 +31,25 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'knox',
     'corsheaders',          
     'rest_framework', 
     'pages.apps.PagesConfig',
     'todo.apps.TodoConfig',
     'frontend.apps.FrontendConfig',
     'traversy.apps.TraversyConfig',
+    'auth_acccounts.apps.AuthAcccountsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.staticfiles'
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': ('knox.auth.TokenAuthentication')
+}
 
 MIDDLEWARE = [
      'corsheaders.middleware.CorsMiddleware', 

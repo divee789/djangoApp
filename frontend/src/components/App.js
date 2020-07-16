@@ -10,14 +10,16 @@ import store from "../store";
 class App extends React.Component {
   render() {
     return (
-      <Provider store={store}>
-        <>
-          <Header />
-          <div className="container">
-            <Dashboard />
-          </div>
-        </>
-      </Provider>
+      <>
+        <Provider store={store}>
+          <>
+            <Header />
+            <div className="container">
+              <Dashboard />
+            </div>
+          </>
+        </Provider>
+      </>
     );
   }
 }
